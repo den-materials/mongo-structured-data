@@ -39,11 +39,18 @@ There are two ways to form relationships in a document-based database...
 
 > Uniquely identifying information, address information, user-generated content.
 
+In Mongo directly, we treate embedded data as a field that is itself a object. We can use JavaScript notation to define the object directly.
+
 ####Referenced Data
 
 * **Referenced Data** contains an *id* of a document that can be found somewhere else
 
 > Memberships, relationships, shared content
+
+In Mongo directly, we store the data we are referencing in a new collection. For example, if we want our Account documents to reference 
+Orders documents we need to create two collections, Accounts and Orders. We create an order and then add the order __id__ to a field in the account.
+If we want to see the order information associated to accounts, we first need to search for our account and then once we have the account
+we can search for the order information. There are Mongo commands to streamline the presentation but there are still to searches.
 
 There is generally a tradeoff between *efficiency* (embedded) and *consistency* (referenced) depending on which one you choose.
 
@@ -103,30 +110,6 @@ var userSchema = new Schema({
   tweets: [tweetSchema]	  // NOTE: Embedding
 });
 ```
-
-##Route Design
-
-In order to *read* & *create* nested data we need to design appropriate routes.
-
-The most popular, modern convention is RESTful routing. Here is an example of an application that has routes for `Store` and an `Item` models:
-
-####RESTful Routing
-|| | |
-|---|---|---|
-| **HTTP Verb** | **Path** | **Description** | **Controller#action**
-| GET | /stores | Get all stores | stores#index |
-| POST | /stores | Create a store | stores#create |
-| GET | /stores/:id | Get a store | stores#show |
-| PUT/PATCH | /stores/:id | Update a store | stores#update |
-| DELETE | /stores/:id | Delete a store | stores#destroy |
-| GET | /stores/:storeId/items | Get all items from a store | items#index |
-| POST | /stores/:storeId/items | Create an item for a store | items#create |
-| GET | /stores/:storeId/items/:itemId | Get an item from a store | items#show |
-| PUT/PATCH | /stores/:storeId/items/:itemId | Update an item from a store | items#update |
-| DELETE | /stores/:storeId/items/:itemId | Delete an item from a store | items#destroy |
-
-*In routes resources should not be nested more than one level deep*
->Note: These routes omit the commonly used `#new` and `#edit` actions, which is common if the server is rendering HTML instead of JSON.
 
 ##Queries Exercise
 
