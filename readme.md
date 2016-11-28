@@ -50,7 +50,7 @@ In Mongo directly, we treate embedded data as a field that is itself a object. W
 In Mongo directly, we store the data we are referencing in a new collection. For example, if we want our Account documents to reference 
 Orders documents we need to create two collections, Accounts and Orders. We create an order and then add the order __id__ to a field in the account.
 If we want to see the order information associated to accounts, we first need to search for our account and then once we have the account
-we can search for the order information. There are Mongo commands to streamline the presentation but there are still to searches.
+we can search for the order information.
 
 There is generally a tradeoff between *efficiency* (embedded) and *consistency* (referenced) depending on which one you choose.
 
