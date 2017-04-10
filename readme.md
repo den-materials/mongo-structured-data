@@ -7,6 +7,8 @@ Market: SF
 
 # Structured Data in Mongo
 
+<!--Developers recommended that we teach this as a "work in progress"--that is, use embedded data where it makes sense, then use embedded data where it DOESN'T make sense, talk about why, and then introduce referenced data to "fix" it-->
+
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
