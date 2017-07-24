@@ -5,6 +5,8 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--9:06 WDI4 -->
+
 # Structured Data in Mongo
 
 <!--Developers recommended that we teach this as a "work in progress"--that is, use embedded data where it makes sense, then use embedded data where it DOESN'T make sense, talk about why, and then introduce referenced data to "fix" it-->
@@ -62,9 +64,10 @@ There is generally a tradeoff between *efficiency* (embedded) and *consistency* 
 
 For each situation would you use embedded or referenced data? Discuss with a partner and be prepared to explain why.
 
+<!--WDI4 9:13 turning over to devs -->
+
 * A `User` that has many `Tweets`?
 * A `Food` that has many `Ingredients`?
-
 
 ### Implementation with Mongoose
 
@@ -116,6 +119,8 @@ var userSchema = new Schema({
 ```
 
 ## Queries Exercise
+
+<!--This Exercise is a lost cause.  I'd say the instructor should just type this out, with devs at half-mast the whole time. -->
 
 #### Goal
 
