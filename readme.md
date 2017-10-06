@@ -5,6 +5,7 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--WDI5 9:04 -->
 <!--9:06 WDI4 -->
 
 # Structured Data in Mongo
@@ -155,6 +156,8 @@ Create and navigate through relational data in MongoDB
 	7) List all the Foods
 	
 	8) List all the ingredients in a Food
+
+<!--WDI5 9:39 -->
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
