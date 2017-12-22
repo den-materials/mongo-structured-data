@@ -1,10 +1,19 @@
-var REPL = require("repl");
-var db = require("./models");
+'use strict'
+const db = require("./models");
 
-var repl = REPL.start("> ");
-repl.context.db = db;
+// 1. create a user document with just a name
 
-repl.on("exit", function () {
-  console.log("Ciao");
-  process.exit();
-})
+// 2. first create some tweet objects, then create a user with those tweets 
+
+// 3. List all the users
+
+// 4. List all tweets of a specific user
+
+// 5. Create several ingredients
+
+// 6. Create a food that references those ingredients
+
+// 7. List all the Foods
+
+// 8. List all the ingredients in a Food
+
